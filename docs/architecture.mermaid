@@ -1,4 +1,6 @@
 graph TD
+    %% Runtime calls and ownership, including calls through application ports.
+    %% This is not a literal TypeScript import graph. See overview.md for layers.
     subgraph "Entry Points"
         CLI["src/cli.ts + src/cli/<br/>One-shot CLI adapter<br/>setup, diagnostics, analysis, decompilation"]
         MAIN["src/main.ts + src/main/<br/>MCP server adapter: stdio default, streamable HTTP opt-in<br/>config, session, process lifetime"]
@@ -23,6 +25,8 @@ graph TD
         RECORDS["src/application/investigation/<br/>composed InvestigationRecords + narrow ports<br/>EvidenceLedger and Unknown ownership"]
         SNAPSHOT["BinarySessionRecords + AnalysisSnapshotCache<br/>binary target/profile snapshots<br/>compatibility facade and post-commit notifications"]
         JS_RECON["src/application/javascript/ + src/artifacts/javascript/<br/>JavaScript artifact reconstruction<br/>directory/ASAR reads<br/>AST-only bundle projection"]
+        CLOSURE["Reconstruction workflows<br/>obligation ledger, claim verification and coverage<br/>authenticated records with declared proof boundaries"]
+        ENVIRONMENT["src/application/environment/<br/>serve/export retained web behavior<br/>recorded agent environments"]
     end
 
     subgraph "Provider Layers"
@@ -34,22 +38,33 @@ graph TD
         GHIDRA["src/ghidra/<br/>Ghidra discovery, profile & function analysis<br/>snapshot, Unix/Windows transport, bounded lifecycle"]
         IDA["src/ida/<br/>Upstream MCP contract adaptation<br/>live GUI binding or owned headless database"]
         IDA_MCP["External ida-pro-mcp<br/>GUI proxy or database supervisor<br/>upstream installation and engine lifecycle"]
+        KUNA["src/kuna/<br/>caller-supplied deep analysis provider<br/>project cache/export and bounded queries"]
         AUX["src/artifacts/ + src/native/<br/>artifact inventory, bounded directory triage and extraction<br/>format readers and native capabilities"]
         BROWSER["src/browser/<br/>CDP / Playwright capture<br/>captured scripts and native module resolution<br/>execution/: coverage, listener and source attribution"]
         JS_CODEC["src/javascript/sourceMaps/<br/>pinned upstream map codec<br/>owned heap-limited Node process, complete point evidence"]
+        JS_WORKER["src/javascript/<br/>bounded analysis worker and optional recovery<br/>request/response and cancellation ownership"]
         INSPECTOR["src/inspector/<br/>passive V8 Inspector discovery and capture<br/>script and target locations"]
         DOTNET["src/dotnet/<br/>Managed static metadata provider<br/>PE/CLI metadata inventory, members, IL"]
         OBJDUMP["src/objdump/<br/>GNU objdump command profile"]
         RIZIN["src/rizin/<br/>Static command profile and persistent debugger sessions"]
         GDB["src/gdb/<br/>Persistent GDB/MI sessions<br/>owned process lifecycle and target state"]
+        CUTTER["src/cutter/<br/>local authenticated bridge<br/>explicit commands and receipt recovery"]
+        FRIDA["src/frida/ + src/application/frida/<br/>optional bindings, device/process selection<br/>attach/spawn, caller scripts and retained cleanup"]
 
         FIRMWARE["src/firmware/<br/>Binwalk / Unblob adapters<br/>owned processes, report normalization, private extraction"]
         ANDROID["src/android/<br/>Static APK adapter<br/>owned SDK stdio, pinned headless JADX, normalization"]
+        MOBILE_TOOLS["src/apktool/ + src/adb/ + src/jeb/<br/>resource decoding, device acquisition and explicit mutation<br/>caller-started JEB MCP inspection"]
+        LANGUAGE["src/go/ + src/rust/ + src/flutter/ + src/il2cpp/<br/>format-specific build/dependency/AOT metadata<br/>explicit IL2CPP Ghidra seed output"]
+        ELECTRON["src/electron/<br/>Electron fuse inspection<br/>owned stable byte reader"]
+        MODEL["src/model/ + src/application/model/<br/>GGUF/safetensors declaration inspection<br/>header identity, optional full hash and retained views"]
+        RECORDED["src/captures/ + src/pcap/ + src/signals/ + src/sqlite/<br/>recorded packet/signal and database inspection<br/>bounded snapshots, provider tools and workers"]
         REFERENCE["src/reference/<br/>Filesystem reference-source reader<br/>bounded traversal, validation, errors"]
     end
 
     subgraph "Provider Process Foundation"
         PROCESS["src/process/<br/>owned process groups, private roots<br/>deadlines, bounded file reads and diagnostics, cleanup"]
+        CAPTURE["src/process/capture/<br/>command/process capture<br/>streams, process identity and persisted observations"]
+        FILESYSTEM["src/filesystem/<br/>stable regular-file reads<br/>owned handles and byte identity"]
         WINDOWS["src/windows/<br/>Windows host boundary adapters<br/>package loader, opaque handles, owned jobs and private runtimes"]
         WINDOWS_NATIVE["native/windows/src/<br/>Node-API implementation<br/>NTFS admission, protected DACLs and atomic Job Object assignment"]
     end
@@ -109,17 +124,29 @@ graph TD
     COMPOSITION --> HOPPER
     COMPOSITION --> GHIDRA
     COMPOSITION --> IDA
+    COMPOSITION --> KUNA
+    KUNA --> PROCESS
+    KUNA --> DOMAIN
     COMPOSITION --> AUX
     IDA --> IDA_MCP
     IDA --> CONTRACTS
     IDA --> DOMAIN
     SESSION --> AUX
     APP --> JS_RECON
+    APP --> CLOSURE
+    CLOSURE --> RECORDS
+    CLOSURE --> DOMAIN
+    APP --> ENVIRONMENT
+    RECORDS -.->|exported Evidence files| ENVIRONMENT
+    ENVIRONMENT --> DOMAIN
     APP --> INSTALL
     SERVER --> CONTRACTS
     SERVER --> APP
     APP --> BROWSER
     APP -->|source-map codec port| JS_CODEC
+    JS_RECON --> JS_WORKER
+    JS_WORKER --> PROCESS
+    JS_WORKER --> DOMAIN
     JS_CODEC --> PROCESS
     JS_CODEC --> DOMAIN
     APP -->|runtime observation port| INSPECTOR
@@ -135,6 +162,23 @@ graph TD
     SERVER --> GDB
     GDB --> PROCESS
     GDB --> DOMAIN
+    COMPOSITION --> CUTTER
+    CUTTER --> DOMAIN
+    COMPOSITION --> FRIDA
+    FRIDA --> DOMAIN
+    APP --> MOBILE_TOOLS
+    MOBILE_TOOLS --> PROCESS
+    MOBILE_TOOLS --> DOMAIN
+    COMPOSITION --> LANGUAGE
+    LANGUAGE --> DOMAIN
+    COMPOSITION --> ELECTRON
+    ELECTRON --> FILESYSTEM
+    COMPOSITION --> MODEL
+    MODEL --> FILESYSTEM
+    MODEL --> DOMAIN
+    COMPOSITION --> RECORDED
+    RECORDED --> PROCESS
+    RECORDED --> DOMAIN
     HOPPER --> HOPPER_BRIDGE
     GHIDRA --> GHIDRA_BRIDGE
     HOPPER --> PROCESS
@@ -148,6 +192,11 @@ graph TD
     PROCESS --> WINDOWS
     WINDOWS --> WINDOWS_NATIVE
     APP --> PROCESS
+    APP --> CAPTURE
+    CAPTURE --> PROCESS
+    CAPTURE --> DOMAIN
+    AUX --> FILESYSTEM
+    FILESYSTEM --> DOMAIN
     APP --> DOMAIN
     JS_RECON --> AUX
     JS_RECON --> DOMAIN

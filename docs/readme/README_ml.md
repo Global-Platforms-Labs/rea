@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > REA ലഭ്യമാക്കേണ്ടത് [morluto/rea](https://github.com/morluto/rea),
 > [rea.tools](https://rea.tools/), അല്ലെങ്കിൽ [rea-agents npm package](https://www.npmjs.com/package/rea-agents) എന്നിവയിൽ നിന്നാണ്.
@@ -243,7 +247,7 @@ Local MCP servers പിന്തുണയ്ക്കുന്ന ഏത് age
 <details>
 <summary><strong>REA ഏത് തരത്തിലുള്ള code ആണ് നൽകുന്നത്?</strong></summary>
 
-Native analysis pseudocode-ഉം assembly-ഉം നൽകുന്നു. JavaScript/Electron analysis modules-ഉം അവയുടെ ബന്ധങ്ങളും വീണ്ടെടുക്കുന്നു. ഈ കണ്ടെത്തലുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ agent implementation എഴുതുകയും പരിശോധിക്കുകയും ചെയ്യും; പ്രായോഗിക ഉദാഹരണങ്ങൾക്കായി [ഉദാഹരണങ്ങൾ](#showcases) കാണുക.
+Native analysis pseudocode-ഉം assembly-ഉം നൽകുന്നു. JavaScript/Electron analysis modules-ഉം അവയുടെ ബന്ധങ്ങളും വീണ്ടെടുക്കുന്നു. ഈ കണ്ടെത്തലുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ agent implementation എഴുതുകയും പരിശോധിക്കുകയും ചെയ്യും; പ്രായോഗിക ഉദാഹരണങ്ങൾക്കായി [ഉദാഹരണങ്ങൾ](#ഉദാഹരണങ്ങൾ) കാണുക.
 
 </details>
 
@@ -271,7 +275,7 @@ rea update
 npx rea-agents@latest setup
 ```
 
-നിങ്ങൾ agent ഉപയോഗിക്കുന്നുണ്ടെങ്കിൽ, [setup പുതുക്കൽ](#update-rea) പൂർത്തിയാക്കി അത് വീണ്ടും ആരംഭിക്കുക. അതേ task വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം തുടരുകയാണെങ്കിൽ, നിങ്ങളുടെ REA version, target type, പ്രശ്നം ആവർത്തിക്കാൻ ആവശ്യമായ ഘട്ടങ്ങൾ, error output എന്നിവ ഉൾപ്പെടുത്തി [issue തുറക്കുക](https://github.com/morluto/rea/issues).
+നിങ്ങൾ agent ഉപയോഗിക്കുന്നുണ്ടെങ്കിൽ, [setup പുതുക്കൽ](#rea-അപ്‌ഡേറ്റ്-ചെയ്യുക) പൂർത്തിയാക്കി അത് വീണ്ടും ആരംഭിക്കുക. അതേ task വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം തുടരുകയാണെങ്കിൽ, നിങ്ങളുടെ REA version, target type, പ്രശ്നം ആവർത്തിക്കാൻ ആവശ്യമായ ഘട്ടങ്ങൾ, error output എന്നിവ ഉൾപ്പെടുത്തി [issue തുറക്കുക](https://github.com/morluto/rea/issues).
 
 </details>
 
@@ -281,6 +285,10 @@ npx rea-agents@latest setup
 കൃത്യമായ options, prerequisites, result contracts എന്നിവയ്ക്കായി:
 
 - [Installation and setup](../installation.md): agent registration, provider configuration, updates, uninstall.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Readiness and troubleshooting](../installation.md#check-readiness-for-your-task): ഒരു agent-ന്റെയോ analysis engine-ന്റെയോ പ്രശ്നങ്ങൾ കണ്ടെത്തുക.
 - [GGUF / safetensors](../model-artifacts.md)
 - [CLI and Evidence](../cli.md): commands, provider തിരഞ്ഞെടുക്കൽ, snapshots, import/export, exit statuses.

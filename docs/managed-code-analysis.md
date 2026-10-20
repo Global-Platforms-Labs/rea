@@ -117,6 +117,13 @@ returning an empty one.
 
 ## Shipped scope
 
+This lane is for .NET PE/CLI metadata and CIL. Java `.class` files and JVM
+JARs require a different analysis route. An archive inventory can identify JAR
+entries without reconstructing their Java, Kotlin or Scala behavior. Use a
+compatible caller-started [JEB client](jeb-analysis.md), or a separately supplied
+JVM inspection/decompiler workflow, and preserve the exact input, tool version,
+output and limitations. `inspect_managed_artifact` does not decode JVM bytecode.
+
 The canonical parser admits PE/CLI bytes and their metadata/CIL without loading
 an assembly. It reports observed implementation markers and unavailable facts;
 it does not unpack .NET single-file hosts or infer a NativeAOT identity from an

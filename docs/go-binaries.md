@@ -61,7 +61,7 @@ rea inspect-go-binary ./application --detail summary --evidence_output ./go-evid
 `--evidence_output` is required for CLI summary delivery and never overwrites an
 existing file. The default CLI/MCP reply remains complete.
 
-[Measured workflows](../experiments/analysis-efficiency/go-build-views.md) include
+[Measured workflows](https://github.com/Global-Platforms-Labs/rea/blob/main/experiments/analysis-efficiency/go-build-views.md) include
 catalog repetition and extra calls. Identity/count questions benefit from a
 single summary. In the tested Codex full-catalog configuration, a compound
 question about identity and one dependency uses fewer tokens in captured request JSON with

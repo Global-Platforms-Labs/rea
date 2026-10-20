@@ -17,6 +17,43 @@ input Evidence bundle. Contradictions, duplicate definitions or owners,
 residual unknowns, missing dependencies, and unavailable authority keep closure
 open or failed.
 
+## What the ledger does and what the project supplies
+
+| Operation                                | Input and result                                                                                             | Boundary                                                                                   |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `build_reconstruction_obligation_ledger` | Authenticated Evidence bundle, reviewed obligations and manifest; returns per-obligation closure diagnostics | Does not run the manifest's verifier command or write implementation code                  |
+| `verify_reconstruction`                  | Finite behavioral/function/artifact claims referencing retained comparison Evidence                          | Evaluates those comparison claims; does not emit obligation-proof records                  |
+| `evaluate_reconstruction_coverage`       | Inline coverage data and one `boundary_id`                                                                   | Evaluates declared inventory, ownership, proof and unresolved gaps for that boundary       |
+| `npm run verify:readiness`               | Repository-owned conformance fixtures                                                                        | Tests REA's own readiness behavior; does not verify an arbitrary reconstructed application |
+
+The current ledger authority check requires reconstruction fixture and verifier
+Evidence with this shape:
+
+- `predicate_type`: `rea.reconstruction-proof`.
+- `operation`: `verify_reconstruction_obligations`.
+- Observation classification: `observed`, with an authority accepted for the required boundary.
+- `normalized_result.passed`: `true`.
+- Matching `obligation_ids`, plus the applicable `fixture_ids`, `case_kinds`,
+  `verifier_ids` and `claim_ids`.
+
+`verify_reconstruction_obligations` is an expected Evidence operation value, not
+a public CLI command or MCP tool. The repository contains controlled test proof
+producers, but no general public runner that executes a project's tests and emits
+these proof records. A project must implement and review that evidence-producing
+harness before claiming automatic ledger closure. An agent must not relabel an
+ordinary passing test or a `verify_reconstruction` result as such a proof.
+
+An Evidence commitment validates record integrity and linkage. It does not
+independently attest the truth of a caller-supplied test result. Review the
+producer, exact target/implementation identity, observed results and coverage.
+Until that integration exists, retain test reports and comparisons, keep the
+ledger obligation open, and describe the gap explicitly.
+
+Implementation: [ledger service](https://github.com/Global-Platforms-Labs/rea/blob/main/src/application/ReconstructionObligationLedgerService.ts),
+[proof authority checks](https://github.com/Global-Platforms-Labs/rea/blob/main/src/application/ReconstructionObligationAuthority.ts),
+[finite verification schema](https://github.com/Global-Platforms-Labs/rea/blob/main/src/domain/reconstructionVerificationSchemas.ts).
+See [planning and AI-assisted work](ai-workflow.md) for the surrounding project workflow.
+
 ## Complete CLI request
 
 This empty request is useful for checking client integration. It is valid and
