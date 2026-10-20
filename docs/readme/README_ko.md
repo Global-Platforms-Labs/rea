@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > REA 공식 배포처: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > 이 공식 배포처에서 제공하는 설치 및 릴리스 링크를 이용하세요. 비슷한 저장소 이름이나 복사된 README만으로는 공식 배포 파일인지 확인할 수 없습니다.
@@ -278,7 +282,12 @@ npx rea-agents@latest setup
 웹사이트의 [실습 가이드](https://rea.tools/ko/guides/)부터 읽어 보세요. 정확한 옵션, 사전 요구 사항, 결과 계약은 다음 문서를 참고하세요.
 
 - [설치 및 설정](../installation.md): 에이전트 등록, 제공자 설정, 업데이트, 제거.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [준비 상태 확인 및 문제 해결](../installation.md#check-readiness-for-your-task): 특정 에이전트 또는 분석 엔진 진단.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI 및 Evidence](../cli.md): 명령, 제공자 선택, 스냅샷, 가져오기/내보내기, 종료 상태.
 - [MCP 계약](../mcp-contracts.md) 및 [에이전트 프롬프트](../mcp-prompts.md): 도구 결과, 세션, 안내에 따른 조사.
 - [도구 카탈로그](../mcp-contracts.md#generated-catalog): 빌드 시 생성되는 도구, 제공자, CLI 명령 목록.

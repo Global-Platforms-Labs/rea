@@ -10,6 +10,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Get started", link: "/installation" },
+      { text: "Overview", link: "/overview" },
       { text: "Reference", link: "/mcp-contracts" },
       { text: "Roadmap", link: "/roadmap" },
     ],
@@ -17,6 +18,8 @@ export default defineConfig({
       {
         text: "Getting started",
         items: [
+          { text: "Overview and architecture", link: "/overview" },
+          { text: "Planning and AI workflow", link: "/ai-workflow" },
           { text: "Installation and setup", link: "/installation" },
           { text: "Client configuration", link: "/client-configuration" },
           { text: "CLI and Evidence", link: "/cli" },
@@ -30,6 +33,7 @@ export default defineConfig({
           { text: "Native binaries", link: "/native-investigation" },
           { text: "Go build metadata", link: "/go-binaries" },
           { text: "IL2CPP metadata", link: "/il2cpp-metadata" },
+          { text: "Model artifacts", link: "/model-artifacts" },
           { text: "Rust dependencies", link: "/rust-binaries" },
           {
             text: "JavaScript and Electron",
@@ -50,12 +54,23 @@ export default defineConfig({
           { text: "Process capture", link: "/process-capture" },
           { text: ".NET assemblies", link: "/managed-code-analysis" },
           { text: "Android applications", link: "/android-analysis" },
+          { text: "Apktool resources", link: "/apktool-resource-analysis" },
+          { text: "ADB acquisition", link: "/adb-device-analysis" },
+          { text: "Flutter artifacts", link: "/flutter-analysis" },
           { text: "Apple applications", link: "/apple-application-analysis" },
           { text: "Desktop installations", link: "/desktop-applications" },
           { text: "Firmware", link: "/firmware-analysis" },
           { text: "SQLite databases", link: "/sqlite-databases" },
           { text: "Packet captures", link: "/packet-captures" },
           { text: "Signal recordings", link: "/signal-recordings" },
+          { text: "PCAP summaries", link: "/pcap-analysis" },
+          { text: "WebAssembly", link: "/wasm-artifacts" },
+          { text: "EVM bytecode", link: "/evm-bytecode" },
+          {
+            text: "Debugger and tool integrations",
+            link: "/reverse-engineering-tools",
+          },
+          { text: "Frida instrumentation", link: "/frida-instrumentation" },
         ],
       },
       {
@@ -64,6 +79,7 @@ export default defineConfig({
         items: [
           { text: "IDA", link: "/ida-provider" },
           { text: "Kuna", link: "/kuna-provider" },
+          { text: "JEB", link: "/jeb-analysis" },
           { text: "Ghidra on Windows", link: "/windows-ghidra-p0" },
           { text: "Ghidra DOS analysis", link: "/ghidra-dos" },
           { text: "Ghidra raw binary", link: "/raw-binary" },
@@ -81,10 +97,16 @@ export default defineConfig({
           { text: "Testing", link: "/testing" },
           { text: "Client verification", link: "/client-verification" },
           {
+            text: "Reconstruction obligations",
+            link: "/reconstruction-obligation-ledgers",
+          },
+          {
             text: "Reconstruction readiness",
             link: "/reconstruction-readiness",
           },
           { text: "Releasing", link: "/releasing" },
+          { text: "Documentation coverage", link: "/documentation-coverage" },
+          { text: "Fork maintenance", link: "/fork-maintenance" },
         ],
       },
     ],

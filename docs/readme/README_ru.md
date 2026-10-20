@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > Официальные источники REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > Используйте ссылки на установку и выпуски из этих официальных источников. Похожее название репозитория или скопированный README не подтверждают, что скачиваемый файл является официальным.
@@ -263,7 +267,12 @@ npx rea-agents@latest setup
 Начните с [практических руководств](https://rea.tools/ru/guides/) на сайте. Точные параметры, требования и контракты результатов описаны здесь:
 
 - [Установка и настройка](../installation.md): регистрация агентов, настройка провайдеров, обновление и удаление.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Готовность и устранение неполадок](../installation.md#check-readiness-for-your-task): диагностика конкретного агента или движка анализа.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI и Evidence](../cli.md): команды, выбор провайдера, снимки, импорт/экспорт и коды завершения.
 - [Контракты MCP](../mcp-contracts.md) и [промпты агентов](../mcp-prompts.md): результаты инструментов, сеансы и исследования с подсказками.
 - [Каталог инструментов](../mcp-contracts.md#generated-catalog): создаваемый при сборке перечень инструментов, провайдеров и команд CLI.

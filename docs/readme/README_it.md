@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > Fonti ufficiali di REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > Segui i link di installazione e delle versioni pubblicate da queste fonti ufficiali. Un nome di repository simile o un README copiato non dimostra che un download sia ufficiale.
@@ -267,7 +271,12 @@ Se stai usando un agente, completa l'[aggiornamento della configurazione](#aggio
 Inizia dalle [guide pratiche](https://rea.tools/it/guides/) del sito web. Per opzioni esatte, prerequisiti e contratti dei risultati:
 
 - [Installazione e configurazione](../installation.md): registrazione agente, configurazione provider, aggiornamenti e disinstallazione.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Pronto all'uso e risoluzione dei problemi](../installation.md#check-readiness-for-your-task): diagnostica un agente o un motore di analisi.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI ed Evidence](../cli.md): comandi, selezione provider, snapshot, import/export e stati di uscita.
 - [Contratti MCP](../mcp-contracts.md) e [prompt agente](../mcp-prompts.md): risultati degli strumenti, sessioni e indagini guidate.
 - [Catalogo strumenti](../mcp-contracts.md#generated-catalog): inventario generato di strumenti, provider e comandi CLI.

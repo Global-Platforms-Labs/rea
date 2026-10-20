@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > المصادر الرسمية لـ REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > استخدم روابط التثبيت والإصدارات المنشورة في هذه المصادر الرسمية. تشابه اسم المستودع أو نسخ ملف README لا يثبت أن التنزيل رسمي.
@@ -265,7 +269,12 @@ npx rea-agents@latest setup
 ابدأ بـ [الأدلة العملية](https://rea.tools/ar/guides/) على الموقع. للخيارات الدقيقة والمتطلبات وعقود النتائج:
 
 - [التثبيت والإعداد](../installation.md): تسجيل الوكلاء، وتهيئة الموفّرين، والتحديثات، وإلغاء التثبيت.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [الجاهزية واستكشاف الأخطاء](../installation.md#check-readiness-for-your-task): تشخيص وكيل أو محرك تحليل محدد.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI وEvidence](../cli.md): الأوامر، واختيار الموفّر، واللقطات، والاستيراد/التصدير، وحالات الخروج.
 - [عقود MCP](../mcp-contracts.md) و[تعليمات الوكلاء](../mcp-prompts.md): نتائج الأدوات، والجلسات، والاستقصاءات الموجّهة.
 - [كتالوج الأدوات](../mcp-contracts.md#generated-catalog): قائمة الأدوات والموفّرين وأوامر CLI المولّدة أثناء البناء.

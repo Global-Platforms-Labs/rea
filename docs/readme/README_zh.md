@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > REA 官方来源： [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > 请通过这些官方来源提供的安装和发布链接获取 REA。相似的仓库名称或复制的 README 不能证明下载内容来自官方。
@@ -269,7 +273,12 @@ npx rea-agents@latest setup
 可以先阅读网站上的[实操指南](https://rea.tools/zh-CN/guides/)。具体选项、前提条件和结果契约见：
 
 - [安装与设置](../installation.md)：智能体注册、提供方配置、更新和卸载。
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [就绪检查与故障排查](../installation.md#check-readiness-for-your-task)：诊断特定智能体或分析引擎。
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI 与 Evidence](../cli.md)：命令、提供方选择、快照、导入/导出和退出状态。
 - [MCP 契约](../mcp-contracts.md)和[智能体提示词](../mcp-prompts.md)：工具结果、会话和引导式调查。
 - [工具目录](../mcp-contracts.md#generated-catalog)：构建时生成的工具、提供方和 CLI 命令清单。

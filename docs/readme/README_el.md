@@ -25,6 +25,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > Κατέβασε το REA από το [morluto/rea](https://github.com/morluto/rea),
 > το [rea.tools](https://rea.tools/) ή το [πακέτο rea-agents στο npm](https://www.npmjs.com/package/rea-agents).
@@ -276,7 +280,12 @@ npx rea-agents@latest setup
 Ξεκίνα από τους [οδηγούς με ολοκληρωμένα παραδείγματα](https://rea.tools/guides/) στον ιστότοπο. Για τις ακριβείς επιλογές, τις προϋποθέσεις και τις προδιαγραφές των αποτελεσμάτων:
 
 - [Εγκατάσταση και ρύθμιση](../installation.md): καταχώριση agents, ρύθμιση παρόχων ανάλυσης, ενημερώσεις και απεγκατάσταση.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Έλεγχος ετοιμότητας και αντιμετώπιση προβλημάτων](../installation.md#check-readiness-for-your-task): διάγνωση ενός agent ή μιας μηχανής ανάλυσης.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI και Evidence](../cli.md): εντολές, επιλογή παρόχου, στιγμιότυπα, εισαγωγή/εξαγωγή και κωδικοί εξόδου.
 - [Προδιαγραφές MCP](../mcp-contracts.md) και [prompts για agents](../mcp-prompts.md): αποτελέσματα εργαλείων, συνεδρίες και καθοδηγούμενες διερευνήσεις.
 - [Κατάλογος εργαλείων](../mcp-contracts.md#generated-catalog): αυτόματα παραγόμενος κατάλογος εργαλείων, παρόχων και εντολών CLI.

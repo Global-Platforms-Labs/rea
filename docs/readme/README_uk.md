@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > Офіційні джерела REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > Користуйтеся посиланнями на встановлення та випуски з цих офіційних джерел. Схожа назва репозиторію або скопійований README не підтверджують, що завантажуваний файл є офіційним.
@@ -263,7 +267,12 @@ npx rea-agents@latest setup
 Почніть із [практичних посібників](https://rea.tools/uk/guides/) на сайті. Точні параметри, передумови й контракти результатів описано тут:
 
 - [Встановлення й налаштування](../installation.md): реєстрація агентів, конфігурація провайдерів, оновлення та видалення.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Готовність та усунення неполадок](../installation.md#check-readiness-for-your-task): діагностика конкретного агента або рушія аналізу.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI та Evidence](../cli.md): команди, вибір провайдера, знімки, імпорт/експорт і статуси завершення.
 - [Контракти MCP](../mcp-contracts.md) і [промпти агентів](../mcp-prompts.md): результати інструментів, сеанси й керовані дослідження.
 - [Каталог інструментів](../mcp-contracts.md#generated-catalog): створюваний під час збірки перелік інструментів, провайдерів і команд CLI.

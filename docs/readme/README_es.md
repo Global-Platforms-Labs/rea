@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > Fuentes oficiales de REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > Usa los enlaces de instalación y de versiones publicados en estas fuentes oficiales. Un nombre de repositorio parecido o un README copiado no demuestra que una descarga sea oficial.
@@ -263,7 +267,12 @@ Si usas un agente, completa la [actualización de la configuración](#actualiza-
 Empieza con las [guías prácticas](https://rea.tools/es/guides/) del sitio web. Para opciones exactas, requisitos y contratos de resultados:
 
 - [Instalación y configuración](../installation.md): registro de agentes, configuración de proveedores, actualizaciones y desinstalación.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Preparación y resolución de problemas](../installation.md#check-readiness-for-your-task): diagnóstico de un agente o motor de análisis concreto.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI y Evidence](../cli.md): comandos, selección de proveedores, instantáneas, importación/exportación y estados de salida.
 - [Contratos de MCP](../mcp-contracts.md) y [prompts para agentes](../mcp-prompts.md): resultados de herramientas, sesiones e investigaciones guiadas.
 - [Catálogo de herramientas](../mcp-contracts.md#generated-catalog): inventario de herramientas, proveedores y comandos de CLI generado durante la compilación.

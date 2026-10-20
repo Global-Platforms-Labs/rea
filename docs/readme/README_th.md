@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > แหล่งทางการของ REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > โปรดใช้ลิงก์ติดตั้งและรุ่นเผยแพร่จากแหล่งทางการเหล่านี้ ชื่อที่เก็บโค้ดที่คล้ายกันหรือ README ที่คัดลอกมาไม่ได้ยืนยันว่าไฟล์ดาวน์โหลดเป็นของทางการ
@@ -263,7 +267,12 @@ npx rea-agents@latest setup
 เริ่มจาก[คู่มือพร้อมตัวอย่าง](https://rea.tools/th/guides/) บนเว็บไซต์ สำหรับตัวเลือก ข้อกำหนดเบื้องต้น และสัญญาผลลัพธ์ที่แน่นอน:
 
 - [การติดตั้งและตั้งค่า](../installation.md): การลงทะเบียนเอเจนต์ การตั้งค่าผู้ให้บริการ การอัปเดต และการถอนการติดตั้ง
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [ความพร้อมใช้งานและการแก้ไขปัญหา](../installation.md#check-readiness-for-your-task): ตรวจวินิจฉัยเอเจนต์หรือเอนจินวิเคราะห์หนึ่งตัว
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI และ Evidence](../cli.md): คำสั่ง การเลือกผู้ให้บริการ สแนปช็อต การนำเข้า/ส่งออก และรหัสการสิ้นสุด
 - [สัญญา MCP](../mcp-contracts.md) และ[พรอมป์ต์สำหรับเอเจนต์](../mcp-prompts.md): ผลลัพธ์เครื่องมือ เซสชัน และการตรวจสอบตามคำแนะนำ
 - [แค็ตตาล็อกเครื่องมือ](../mcp-contracts.md#generated-catalog): รายการเครื่องมือ ผู้ให้บริการ และคำสั่ง CLI ที่สร้างระหว่างการบิลด์

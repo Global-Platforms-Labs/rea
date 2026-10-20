@@ -32,6 +32,10 @@
 > Follow the installation and release links from these official sources. A similar
 > repository name or copied README does not establish that a download is official.
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance](docs/fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 <div align="center">
 
 <br />
@@ -180,6 +184,7 @@ Additional tools and host support depend on the target:
 | Native binaries        | Pseudocode, assembly, strings, symbols, calls and references                                      | Hopper, Ghidra or IDA; [native analysis](docs/native-investigation.md)                                                                |
 | Offline ELF layout     | Sections, segments, original symbols/relocations and static mitigation candidates                 | Caller-supplied pwntools on Linux x64; [binary diagnostics](docs/binary-diagnostics.md)                                               |
 | Go binaries            | Embedded compiler version, modules, replacements and build settings                               | Built-in static ELF/PE/thin Mach-O inspection; no Go installation required                                                            |
+| Model artifacts        | GGUF / safetensors metadata, tensor declarations and derived totals                               | Built-in header inspection; optional full-file hash; [model files](docs/model-artifacts.md)                                           |
 | IL2CPP metadata        | Unity global-metadata.dat assembly images, type and method names and index ranges                 | Built-in static decoding of versions 24, 27, 29, 31 and 39; no Unity required                                                         |
 | Godot PCK              | Archive inventory and extraction, original header/directory facts and selected content identities | Built-in static formats 2, 3 and 4; no Godot required                                                                                 |
 | Rust binaries          | Embedded cargo-auditable crate names, versions, sources and dependency edges                      | Built-in static ELF/PE/thin Mach-O inspection; [Rust binaries](docs/rust-binaries.md)                                                 |
@@ -346,6 +351,10 @@ Start with the website's [worked guides](https://rea.tools/guides/).
 For exact options, prerequisites and result contracts:
 
 - [Installation and setup](docs/installation.md): agent registration, provider configuration, updates and uninstall.
+- [Project overview and architecture](docs/overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work](docs/ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage](docs/documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance](docs/fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Readiness and troubleshooting](docs/installation.md#check-readiness-for-your-task): diagnose one agent or analysis engine.
 - [CLI and Evidence](docs/cli.md): commands, provider selection, snapshots, import/export and exit statuses.
 - [MCP contracts](docs/mcp-contracts.md) and [agent prompts](docs/mcp-prompts.md): tool results, sessions and guided investigations.

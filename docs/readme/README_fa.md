@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > منابع رسمی REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > از پیوندهای نصب و انتشار در این منابع رسمی استفاده کنید. نام مشابه مخزن یا README کپی‌شده ثابت نمی‌کند که فایل دانلودی رسمی است.
@@ -248,7 +252,12 @@ npx rea-agents@latest setup
 از [راهنماهای عملی وب‌سایت](https://rea.tools/fa/guides/) شروع کنید. برای گزینه‌های دقیق، پیش‌نیازها و قراردادهای خروجی:
 
 - [نصب و راه‌اندازی](../installation.md): ثبت ایجنت، پیکربندی ارائه‌دهنده، به‌روزرسانی و حذف نصب.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [آمادگی و رفع اشکال](../installation.md#check-readiness-for-your-task): عیب‌یابی یک ایجنت یا موتور تحلیل.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI و شواهد](../cli.md): دستورات، انتخاب ارائه‌دهنده، snapshotها، ورود/خروج داده و وضعیت‌های خروج.
 - [قراردادهای MCP](../mcp-contracts.md) و [پرامپت‌های ایجنت](../mcp-prompts.md): نتایج ابزارها، نشست‌ها و بررسی‌های هدایت‌شده.
 - [فهرست ابزارها](../mcp-contracts.md#generated-catalog): فهرست تولیدشده هنگام build از ابزارها، ارائه‌دهندگان و دستورات CLI.

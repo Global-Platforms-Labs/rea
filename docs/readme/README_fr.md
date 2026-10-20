@@ -26,6 +26,10 @@
 
 </div>
 
+This is the [Global-Platforms-Labs fork](https://github.com/Global-Platforms-Labs/rea).
+Upstream distribution links remain unchanged. See [fork maintenance (English)](../fork-maintenance.md)
+for local source builds, ownership and upstream synchronization.
+
 > [!IMPORTANT]
 > Sources officielles de REA : [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
 > Utilisez les liens d’installation et de publication de ces sources officielles. Un nom de dépôt similaire ou un README copié ne prouve pas qu’un téléchargement est officiel.
@@ -267,7 +271,12 @@ Si vous utilisez un agent, terminez l'[actualisation de la configuration](#mettr
 Commencez par les [guides pas à pas](https://rea.tools/fr/guides/) du site web. Pour les options exactes, les prérequis et les contrats de résultats :
 
 - [Installation et configuration](../installation.md) : enregistrement des agents, configuration des fournisseurs, mises à jour et désinstallation.
+- [Project overview and architecture (English)](../overview.md): modules, request/Evidence flow and resource ownership.
+- [Planning and AI-assisted work (English)](../ai-workflow.md): task briefs, plans, implementation, review, REA verification and session continuity.
+- [Documentation coverage (English)](../documentation-coverage.md): source-area inventory, guide ownership and validation limits.
+- [Fork maintenance (English)](../fork-maintenance.md): source builds and reviewed upstream synchronization.
 - [Vérification et dépannage](../installation.md#check-readiness-for-your-task) : diagnostiquer un agent ou un moteur d'analyse donné.
+- [GGUF / safetensors](../model-artifacts.md)
 - [CLI et Evidence](../cli.md) : commandes, choix du fournisseur, snapshots, import/export et codes de sortie.
 - [Contrats MCP](../mcp-contracts.md) et [prompts pour agents](../mcp-prompts.md) : résultats des outils, sessions et investigations guidées.
 - [Catalogue des outils](../mcp-contracts.md#generated-catalog) : inventaire des outils, fournisseurs et commandes CLI, généré lors du build.
